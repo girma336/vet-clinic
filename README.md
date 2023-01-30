@@ -63,11 +63,11 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [vet_clinic] <a name="about-project"></a>
 
 > Describe your project in 1 or 2 sentences.
 
-**[your_project__name]** is a...
+**[vet_clinic]** is a relational database to create the data structure for a vet clinic. You will start with one table, and step by step, you will create a complete database with data abou
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -102,9 +102,9 @@ After you're finished please remove all the comments and instructions!
 
 > Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **[query]**
+- **[create_table]**
+- **[Insert_data]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -114,7 +114,7 @@ After you're finished please remove all the comments and instructions!
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [Live Demo Link]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -210,15 +210,8 @@ Example:
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/girma336)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/girma-tarekegn)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -228,9 +221,9 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **[animals'_owners]**
+- [ ] **[clinic_employees]**
+- [ ] **[visits]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -266,17 +259,6 @@ I would like to thank...
 
 <!-- FAQ (optional) -->
 
-## ❓ FAQ <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
