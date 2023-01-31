@@ -18,6 +18,7 @@ SELECT * FROM animals;
 BEGIN TRANSACTION;
 UPDATE animals SET species = 'digimon' WHERE NAME LIKE '%mon';
 UPDATE animals SET species = 'pokemon' WHERE NAME  NOT LIKE '%mon';
+SELECT * FROM animals;
 COMMIT;
 SELECT * FROM animals;
 
