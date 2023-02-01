@@ -16,8 +16,8 @@ ROLLBACK;
 SELECT * FROM animals;
 
 BEGIN TRANSACTION;
-UPDATE animals SET species = 'digimon' WHERE NAME LIKE '%mon';
-UPDATE animals SET species = 'pokemon' WHERE NAME  NOT LIKE '%mon';
+UPDATE animals SET species = 'Digimon' WHERE name LIKE '%mon';
+UPDATE animals SET species = 'Pokemon' WHERE name  NOT LIKE '%mon';
 SELECT * FROM animals;
 COMMIT;
 SELECT * FROM animals;
@@ -44,4 +44,29 @@ SELECT neutered, COUNT(*) FROM animals WHERE escape_attempts > 1 GROUP BY neuter
 SELECT species, MIN(weight_kg), MAX(weight_kg) FROM animals GROUP BY species;
 SELECT species, AVG(escape_attempts) FROM animals WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31' GROUP BY species;
 
+SELECT name, full_name FROM animals 
+JOIN owners ON animals.owner_id = owners.id
+WHERE owners.full_name = 'Melody Pond';
 
+SELECT full_name, name FROM animals 
+RIGHT JOIN owners ON owners.id = animals.owner_id;
+
+SELECT animals.name as animalName, species.name as speciesName FROM animals 
+JOIN species ON animals.species_id = species.id 
+WHERE species.name = 'Pokermon';
+
+SELECT species.name, COUNT(*) FROM animals
+JOIN species ON species.id = animals.species_id
+GROUP BY species.name;
+
+SELECT * FROM animals
+JOIN owners ON owners.id = animals.owner_id
+WHERE animals.species_id = 2 AND full_name = 'Jennifer Orwell';
+
+SELECT * FROM animals
+JOIN owners ON owners.id = animals.owner_id
+WHERE animals.escape_attempts = 0 AND full_name = 'Dean Winchester';
+
+SELECT full_name, COUNT(*) FROM animals
+JOIN owners ON owners.id = animals.owner_id
+GROUP BY full_name ORDER BY COUNT(*) ASC;
