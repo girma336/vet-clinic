@@ -70,3 +70,19 @@ WHERE animals.escape_attempts = 0 AND full_name = 'Dean Winchester';
 SELECT full_name, COUNT(*) FROM animals
 JOIN owners ON owners.id = animals.owner_id
 GROUP BY full_name ORDER BY COUNT(*) ASC;
+
+SELECT * FROM animals JOIN visits ON id = animals_id WHERE vet_id = 1;
+SELECT COUNT(name) FROM animals JOIN visits ON animals.id = visits.animals_id WHERE vet_id = 3;
+SELECT name, species_id FROM vets LEFT JOIN specializations s ON vets.id = s.vet_id;
+
+SELECT animals.name, visits.date_of_visit FROM animals 
+JOIN visits ON animals.id = visits.animals_id 
+WHERE vet_id = 3 AND date_of_visit BETWEEN '2020-04-01' AND '2020-08-30';
+
+SELECT animals.name, COUNT(*) FROM animals
+JOIN visits ON animals.id = visits.animals_id 
+GROUP BY animals.name ORDER BY COUNT(animals_id);
+
+SELECT animals.name, visits.date_of_visit FROM animals 
+JOIN visits ON visits.vet_id = animals.id
+WHERE vet_id = 2 ORDER BY visits.date_of_visit ASC LIMIT 1;
