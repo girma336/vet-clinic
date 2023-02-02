@@ -159,8 +159,8 @@ Install this project with:
 Example command:
 
 ```sh
-  cd my-project
-  gem install
+  git clone https://github.com/girma336/vet-clinic
+  cd vet-clinic
 ```
 --->
 
