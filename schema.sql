@@ -51,3 +51,7 @@ CREATE TABLE visits (
     vet_id INTEGER REFERENCES vets(id) ON DELETE CASCADE,
     date_of_visit date
 );
+
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
