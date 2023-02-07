@@ -51,3 +51,12 @@ CREATE TABLE visits (
     vet_id INTEGER REFERENCES vets(id) ON DELETE CASCADE,
     date_of_visit date
 );
+
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+-- Find a way to decrease the execution time of the first query. Look for hints in the previous lessons.
+ CREATE INDEX ON visits (animal_id);
+--  Find a way to improve execution time of the other two queries.
+    CREATE INDEX ON visits (vet_id);
+    CREATE INDEX ON owners (email);
