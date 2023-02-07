@@ -35,3 +35,19 @@ CREATE TABLE invoices(
 	REFERENCES medical_histories(id)
 )
 
+-- CREATE invoice_item table
+CREATE TABLE invoice_item(
+  id SERIAL PRIMARY KEY,
+  unit_price DECIMAL(10,2),
+  quantity INT,
+  total_price DECIMAL(10,2),
+  invoice_id INT,
+  CONSTRAINT fk_invoice_id
+  FOREIGN KEY(invoice_id)
+  REFERENCES invoices(id),
+  treatment_id INT,
+  CONSTRAINT fk_treatment_id
+  FOREIGN KEY(treatment_id)
+  REFERENCES treatments(id)
+)
+
