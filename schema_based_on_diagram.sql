@@ -3,14 +3,15 @@ CREATE TABLE patients(
 	id SERIAL PRIMARY KEY,
 	name VARCHAR(255),
 	date_of_birth DATE
-)
+);
 
 -- create treatments table
 CREATE TABLE treatments(
 	id SERIAL PRIMARY KEY,
 	type VARCHAR(255),
 	name VARCHAR(255)
-)
+);
+
 
 -- create medical histories table
 CREATE TABLE medical_histories(
@@ -19,9 +20,12 @@ CREATE TABLE medical_histories(
 	patient_id INT,
 	CONSTRAINT fk_patient_id
 	FOREIGN KEY(patient_id)
-	REFERENCES patients(id)
-  status VARCHAR(255)
-)
+	REFERENCES patients(id),
+    status VARCHAR(255)
+);
+
+CREATE INDEX medical_his_patient_id_idx ON 
+medical_histories(patient_id);
 
 -- create invoices table
 CREATE TABLE invoices(
@@ -34,6 +38,8 @@ CREATE TABLE invoices(
 	FOREIGN KEY(medical_history_id)
 	REFERENCES medical_histories(id)
 )
+CREATE INDEX invoices_medical_his_id_idx ON 
+invoices(medical_history_id);
 
 -- CREATE invoice_item table
 CREATE TABLE invoice_item(
@@ -51,3 +57,7 @@ CREATE TABLE invoice_item(
   REFERENCES treatments(id)
 )
 
+CREATE INDEX invoices_item_invoice_id_idx ON 
+invoices(invoice_id);
+CREATE INDEX invoices_item_treatment_id_idx ON 
+invoices(treatment_id);
